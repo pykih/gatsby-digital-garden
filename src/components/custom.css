@@ -1,0 +1,32 @@
+/** Add any custom CSS you want here **/
+
+
+
+
+
+/*body{background-color: #354791; color: white;} header{background: white;} .note-columns-container, .note-container, .note-content{background-color: #354791; color: white;}*/
+
+
+a.inlink{color: #879FFA;}
+a{color: #1E2648;}
+
+h1{font-size: 2em; padding-top: 0px; margin-top: 0px; color: #354791;}
+h2{font-size: 1.5em;}
+h3{font-size: 1.1em;}
+
+ul{
+	list-style-type: none;
+	padding-left: 0px;
+}
+li{
+	margin-top: 16px;
+	margin-bottom: 16px;
+	font-size: 16px;
+}
+
+.margin{margin: 10px;}
+
+.references-block{background: #FDFAFF; font-size: 14px; margin-top: 60px;}
+.references-block > h3{font-weight: bold; color:black; margin-bottom: 20px;}
+a.reference{text-decoration: underline; color: blue; padding-bottom: 30px !important;}
+

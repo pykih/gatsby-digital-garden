@@ -1,18 +1,94 @@
 {
-  "name": "gatsby-digital-garden",
-  "private": true,
+  "_args": [
+    [
+      "gatsby-theme-garden@0.1.42",
+      "/Users/Admin/Documents/protosignals"
+    ]
+  ],
+  "_from": "gatsby-theme-garden@0.1.42",
+  "_id": "gatsby-theme-garden@0.1.42",
+  "_inBundle": false,
+  "_integrity": "sha512-f8v36v5aGhH+Sj59evPlmCQYcLj+qPgFeTsKrvCAesv9blBV+CrRjzmCjBmShB+xZmXdjErnZ4fcroyBAhtJeA==",
+  "_location": "/gatsby-theme-garden",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "gatsby-theme-garden@0.1.42",
+    "name": "gatsby-theme-garden",
+    "escapedName": "gatsby-theme-garden",
+    "rawSpec": "0.1.42",
+    "saveSpec": null,
+    "fetchSpec": "0.1.42"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-theme-garden/-/gatsby-theme-garden-0.1.42.tgz",
+  "_spec": "0.1.42",
+  "_where": "/Users/Admin/Documents/protosignals",
+  "author": {
+    "name": "Mathieu Dutour",
+    "email": "mathieu@dutour.me"
+  },
+  "bugs": {
+    "url": "https://github.com/mathieudutour/gatsby-digital-garden/issues"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.1",
+    "@mdx-js/react": "^1.6.1",
+    "@react-hook/window-size": "~2.0.5",
+    "@tippyjs/react": "^4.0.2",
+    "d3": "^5.16.0",
+    "gatsby-core-utils": "^1.2.1",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-plugin-mdx": "^1.2.12",
+    "gatsby-plugin-sharp": "^2.6.14",
+    "gatsby-plugin-use-dark-mode": "^1.1.2",
+    "gatsby-remark-autolink-headers": "^2.3.7",
+    "gatsby-remark-copy-linked-files": "^2.3.7",
+    "gatsby-remark-double-brackets-link": "^0.1.6",
+    "gatsby-remark-double-parenthesis-link": "^0.1.2",
+    "gatsby-remark-images": "^3.3.13",
+    "gatsby-source-filesystem": "^2.3.8",
+    "gatsby-source-roamresearch": "^0.4.1",
+    "gatsby-transformer-markdown-references": "^0.1.5",
+    "react-spring": "^8.0.27",
+    "react-stacked-pages-hook": "^0.4.4",
+    "slugify": "^1.4.0",
+    "use-dark-mode": "^2.3.1"
+  },
+  "description": "Gatsby theme to create a digital garden",
+  "devDependencies": {
+    "@types/react-dom": "^16.9.8",
+    "gatsby": "^2.22.10",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "homepage": "https://github.com/mathieudutour/gatsby-digital-garden#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin",
+    "digital-garden",
+    "react",
+    "notes",
+    "roam-research"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "gatsby-theme-garden",
+  "peerDependencies": {
+    "gatsby": "^2.13.13",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "repository": {
+    "url": "git+https://github.com/mathieudutour/gatsby-digital-garden.git",
+    "directory": "packages/gatsby-theme-garden"
+  },
   "scripts": {
     "test": "jest"
   },
-  "author": "Mathieu Dutour <mathieu@dutour.me>",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/jest": "^25.2.2",
-    "@types/node": "^14.0.1",
-    "jest": "^26.0.1",
-    "jest-cli": "^26.0.1",
-    "prettier": "^2.0.5",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
-  }
+  "version": "0.1.42"
 }

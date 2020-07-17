@@ -1,41 +1,58 @@
-# Gatsby And Digital Garden
+# gatsby-theme-garden
 
-A set of packages to create a digital garden with Gatsby.
+A Gatsby theme for publishing a digital garden.
 
-- [fetch-roamresearch](./packages/fetch-roamresearch): Export and download a Roam Research database
-- [gatsby-source-roamresearch](./packages/gatsby-source-roamresearch): Source plugin for pulling data into Gatsby from Roam Research.
-- [gatsby-remark-double-brackets-link](./packages/gatsby-remark-double-brackets-link): Transform `[[page]]` into a proper link.
-- [gatsby-remark-double-parenthesis-link](./packages/gatsby-remark-double-parenthesis-link): Transform `((page))` into a proper link.
-- [react-stacked-pages-hook](./packages/react-stacked-pages-hook): Manage a stack of pages in Gatsby.
-- [gatsby-transformer-markdown-references](./packages/gatsby-transformer-markdown-references): Extract references between markdown nodes.
-- [gatsby-theme-garden](./packages/gatsby-theme-garden): A Gatsby theme bundling all of the above packages.
+## Installation
 
-An example site for leveraging all of them is at [https://mathieudutour.github.io/gatsby-digital-garden/](https://mathieudutour.github.io/gatsby-digital-garden/).
+### For a new site
 
-## 🚀 Quick start
+If you're creating a new site and want to use the garden theme, you can use the garden theme starter. This will generate a new site that pre-configures use of the garden theme.
 
-Quickly get started using the Gatsby garden theme! This starter creates a new Gatsby site that is preconfigured to work with the [Gatsby garden theme](https://www.npmjs.com/package/gatsby-theme-garden).
+```shell
+gatsby new my-digital-garden https://github.com/mathieudutour/gatsby-starter-digital-garden
+```
 
-1.  **Create a Gatsby site.**
+### Manually add to your site
 
-    Use the Gatsby CLI to create a new site, specifying the garden theme starter.
+1. Install the theme
 
-    ```shell
-    # create a new Gatsby site using the garden theme starter
-    gatsby new my-digital-garden https://github.com/mathieudutour/gatsby-starter-digital-garden
-    ```
+```shell
+npm install gatsby-theme-garden
+```
 
-2.  **Start developing.**
+2. Add the configuration to your `gatsby-config.js` file
 
-    Navigate into your new site’s directory and start it up.
+```js
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-theme-garden`,
+      options: {
+        // basePath defaults to `/`
+        basePath: `/garden`,
+        rootNote: `/garden/About-these-notes`,
+        contentPath: `/content/garden`,
+      },
+    },
+  ],
+};
+```
 
-    ```shell
-    cd my-digital-garden/
-    gatsby develop
-    ```
+3. Add notes to your site by creating `md` or `mdx` files inside `/content/garden`.
 
-3.  **Open the code and start customizing!**
+4. Run your site using `gatsby develop` and navigate to your notes. If you used the above configuration, your URL will be `http://localhost:8000/garden`
 
-    Your site is now running at `http://localhost:8000`!
+> You can also use a Roam Research database to source your notes. Specify the `roamUrl`, `roamEmail` and `roamPassword` options to do so. More information on [gatsby-source-roamresearch](../gatsby-source-roamresearch)
 
-    To get started, check out the guide to [using a Gatsby theme](https://gatsbyjs.org/docs/themes/using-a-gatsby-theme), or the longer, [more detailed tutorial](https://gatsbyjs.org/tutorial/using-a-theme).
+### Options
+
+| Key                      | Default value | Description                                                                      |
+| ------------------------ | ------------- | -------------------------------------------------------------------------------- |
+| `basePath`               | `/`           | Root url for the garden                                                          |
+| `rootNote`               |               | The URL of the note to use as the root                                           |
+| `contentPath`            |               | Location of local content                                                        |
+| `roamUrl`                |               | The URL of your Roam Research database                                           |
+| `roamEmail`              |               | Email used to sign into Roam Research                                            |
+| `roamPassword`           |               | Password used to sign into Roam Research                                         |
+| `mdxOtherwiseConfigured` | `false`       | Set this flag `true` if `gatsby-plugin-mdx` is already configured for your site. |
